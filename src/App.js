@@ -1,25 +1,79 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
 
-function App() {
+export default function Counter() {
+  const [x, setx] = useState(0);
+  let text = OddEvenChecker();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <section
+      style={{
+        display: "flex",
+        minHeight: "100vh",
+        flexDirection: "column",
+        gap: "12px",
+        marginTop: "0",
+        alignItems: "center",
+        justifyContent: "center",
+        background: "#304159",
+      }}
+    >
+      <div
+        style={{
+          background: "white",
+          padding: "24px",
+          width: "200px",
+          borderColor: "Black",
+          borderWidth: "2px",
+          border: "Solid",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            gap: "10px",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Adder />
+          {x}
+          <Subtractor />
+        </div>
+        <p style={{ textAlign: "center" }}>This text is {text} numbered</p>
+      </div>
+    </section>
   );
-}
 
-export default App;
+  function handleAddClick() {
+    setx(x + 1);
+  }
+
+  function handleSubClick() {
+    setx(x - 1);
+  }
+
+  function Adder() {
+    return (
+      <div>
+        <button onClick={handleAddClick}>+</button>
+      </div>
+    );
+  }
+
+  function Subtractor() {
+    return (
+      <div>
+        <button onClick={handleSubClick}>-</button>
+      </div>
+    );
+  }
+
+  function OddEvenChecker() {
+    if (x % 2 === 0) {
+      return "even";
+    } else {
+      return "odd";
+    }
+  }
+}

@@ -8,10 +8,8 @@ export function Counter() {
       style={{
         display: "flex",
         padding:"24px",
-        //height: "100vh",
-        // minHeight: "100vh",
+        minHeight: "150px",
         flexDirection: "column",
-        gap: "12px",
         alignItems: "center",
         justifyContent: "center",
         background: "white",

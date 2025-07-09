@@ -7,12 +7,18 @@ export function Counter() {
     <section
       style={{
         display: "flex",
-        minHeight: "100vh",
+        padding:"24px",
+        //height: "100vh",
+        // minHeight: "100vh",
         flexDirection: "column",
         gap: "12px",
         alignItems: "center",
         justifyContent: "center",
-        background: "#304159",
+        background: "white",
+        borderLeft: "2px solid black",
+        borderTopRightRadius:"20px",
+        borderBottomRightRadius: "20px",
+        overflow: "hidden"
       }}
     >
 
@@ -20,14 +26,15 @@ export function Counter() {
 
       <div
         style={{
-          background: "white",
-          padding: "24px",
-          width: "50%",
-          height: "50%",
-          borderColor: "Black",
-          borderWidth: "3px",
-          borderRadius: "20px",
-          border: "Solid",
+        //   background: "white",
+        //   padding: "24px",
+        //   width: "50%",
+        //   height: "50%",
+        //   borderColor: "Black",
+        //   borderWidth: "3px",
+        //   borderRadius: "20px",
+        //   border: "Solid",
+        //   alignContent: "center"
         }}
       >
         <div
@@ -35,7 +42,7 @@ export function Counter() {
             display: "flex",
             gap: "10px",
             justifyContent: "center",
-            alignItems: "center",
+            alignItems: "center"
           }}
         >
           <Adder />

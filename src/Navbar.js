@@ -5,11 +5,10 @@ export function Navbar() {
             display: "flex", 
             padding: "10px", 
             background: "lightgray",
-            gap:"40%",
             height:"20px",
             overflow: "hidden",
             alignContent: "center",
-            justifyContent: "center",
+            justifyContent: "space-between",
             border: "2px solid black"
             }}
         >

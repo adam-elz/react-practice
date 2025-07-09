@@ -1,14 +1,19 @@
 import "./App.css";
 import { Navbar } from "./Navbar";
-import {Counter} from "./Counter"
+import {CounterGrid} from "./CounterGrid";
 
 
 export default function Homepage() {
   
   return (
-    <section>
+    <section style={{display:"flex",flexDirection:"column",background: "#304159", height:"100vh", justifyContent:"center"}}>
       <Navbar/>
-      <Counter/> 
+        <div style={{display: "flex",width: "100vw", height: "100vh", justifyContent:"center",alignContent:"center"}}>
+          <div style={{width:"30%", alignContent:"center", justifyContent: "center"}}>
+            <CounterGrid/>
+          </div>
+        </div>
+       
    </section>
    
   )

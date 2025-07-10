@@ -1,16 +1,15 @@
 import { useState } from "react";
-import { Counter } from "./Counter";
-import { Person } from "./Person";
+import { Counter } from "./Counter.jsx";
+import { Person } from "./Person.jsx";
 
 export function CounterGrid() {
   return (
     <div
       style={{
-        display: "flex",
-        alignContent: "center",
-        justifyContent: "center",
         display: "grid",
         gridTemplateColumns: "1fr 1fr",
+        alignContent: "center",
+        justifyContent: "center",
         background: "white",
         border: "2px solid black",
         borderRadius: "20px",

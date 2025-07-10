@@ -1,20 +1,9 @@
 export function Navbar() {
     return(
-        <section 
-        style={{
-            display: "flex", 
-            padding: "10px", 
-            background: "lightgray",
-            height:"20px",
-            overflow: "hidden",
-            alignContent: "center",
-            justifyContent: "space-between",
-            border: "2px solid black"
-            }}
-        >
-            <div>Welcome!</div>
+        <section className="flex bg-gray-400 w-screen h-16 p-2.5 overflow-hidden items-center justify-between border-black border-2">
+            <div> Welcome!</div>
             <div>React Test 1</div>
-            <button style={{background:"red"}}>Logout</button>
+            <button className="bg-red-500 text-white">Logout</button>
         </section>
     )
 }
